@@ -152,6 +152,66 @@
         }
         .hero-links a svg { width: 15px; height: 15px; fill: currentColor; }
 
+        /* ===== HERO PRODUCT ===== */
+        .hero-product {
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-product-badge {
+            display: inline-block;
+            font-size: 0.7em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            color: rgba(255,255,255,0.7);
+        }
+        .hero-product h2 {
+            font-size: 1.6em;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .hero-product-tagline {
+            font-size: 0.95em;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+        }
+        .hero-product-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            color: var(--accent);
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 24px;
+            font-size: 0.9em;
+            font-weight: 700;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .hero-product-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+        }
+        .hero-product-cta svg {
+            width: 16px; height: 16px;
+            fill: var(--accent);
+            transition: transform 0.2s;
+        }
+        .hero-product-cta:hover svg {
+            transform: translateX(3px);
+        }
+
         /* ===== CONTAINER ===== */
         .container {
             max-width: 880px;
@@ -179,14 +239,119 @@
         }
 
         /* ===== ABOUT ===== */
-        .about-text {
-            font-size: 0.98em;
-            color: var(--text-light);
-            line-height: 1.85;
-            max-width: 780px;
+        .about-intro {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            box-shadow: var(--shadow);
+            margin-bottom: 28px;
         }
-        .about-text p { margin-bottom: 16px; }
-        .about-text p:last-child { margin-bottom: 0; }
+        .about-intro p {
+            font-size: 0.95em;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+        .about-intro p:last-child { margin-bottom: 0; }
+        .about-journey {
+            margin-bottom: 28px;
+        }
+        .about-journey-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .about-journey-item:last-child { margin-bottom: 0; }
+        .journey-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1em;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .journey-icon.msr { background: #e8f5e9; }
+        .journey-icon.nlp { background: #e3f2fd; }
+        .journey-icon.llm { background: #fff3e0; }
+        .journey-icon.s3d { background: #f3e5f5; }
+        .journey-content h4 {
+            font-size: 0.92em;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .journey-content p {
+            font-size: 0.88em;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        .about-callout {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: var(--radius);
+            padding: 32px;
+            color: rgba(255,255,255,0.9);
+            position: relative;
+            overflow: hidden;
+        }
+        .about-callout::before {
+            content: '';
+            position: absolute;
+            top: -40px; right: -40px;
+            width: 120px; height: 120px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+        }
+        .about-callout::after {
+            content: '';
+            position: absolute;
+            bottom: -30px; left: 40%;
+            width: 80px; height: 80px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
+        }
+        .about-callout p {
+            font-size: 0.93em;
+            line-height: 1.75;
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+        .about-callout p:last-child { margin-bottom: 0; }
+        .about-callout .callout-highlight {
+            font-size: 1.08em;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .about-callout .callout-closing {
+            font-size: 1em;
+            font-style: italic;
+            color: rgba(255,255,255,0.75);
+            padding-top: 10px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+        .about-callout .interest-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .about-callout .interest-chips span {
+            font-size: 0.8em;
+            background: rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.9);
+            padding: 4px 12px;
+            border-radius: 14px;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
 
         /* ===== RESEARCH VISION ===== */
         .vision-intro {
@@ -513,6 +678,50 @@
             border-radius: 10px;
             font-weight: 500;
         }
+        .project-card-featured {
+            border: 2px solid var(--accent);
+            position: relative;
+        }
+        .project-featured-badge {
+            display: inline-block;
+            font-size: 0.7em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 3px 12px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            background: var(--accent);
+            color: #fff;
+        }
+        .project-featured-badge.research {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        .proj-capabilities-label {
+            font-size: 0.85em;
+            color: var(--text);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .proj-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 16px;
+            font-size: 0.9em;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+            transition: gap 0.2s;
+        }
+        .proj-link:hover {
+            gap: 10px;
+        }
+        .proj-link svg {
+            width: 16px; height: 16px;
+            fill: var(--accent);
+        }
 
         /* ===== CONTACT ===== */
         .contact-box {
@@ -566,6 +775,8 @@
             .hero h1 { font-size: 1.8em; }
             .hero-avatar { width: 110px; height: 110px; }
             .container { padding: 32px 16px 60px; }
+            .hero-product h2 { font-size: 1.3em; }
+            .hero-product { margin-top: 28px; padding-top: 24px; }
             .vision-roadmap, .interests-grid { grid-template-columns: 1fr; }
             .achievements-grid { grid-template-columns: repeat(2, 1fr); }
             .exp-block { padding: 22px 18px; }
@@ -627,11 +838,112 @@
             <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
             <span data-zh="关于我" data-en="About Me">About Me</span>
         </h2>
-        <div class="about-text">
+
+        <!-- Intro card -->
+        <div class="about-intro">
             <p data-zh="我是一名研究者、工程师和创业者，工作领域处于基础模型、空间智能和物理AI的交汇点。" data-en="I am a researcher, engineer, and entrepreneur working at the intersection of Foundation Models, Spatial Intelligence, and Physical AI.">I am a researcher, engineer, and entrepreneur working at the intersection of Foundation Models, Spatial Intelligence, and Physical AI.</p>
-            <p data-zh="我的研究生涯始于软件仓库挖掘（MSR），探索如何通过自然语言处理、机器学习和深度学习技术来利用大规模软件知识库。在武汉大学攻读博士期间，我专注于软件标签推荐和软件知识理解，基于搜索-学习范式、CNN、RNN、RCNN和层次注意力网络等方法进行研究。" data-en="My research career began in Mining Software Repositories (MSR), where I explored how large-scale software knowledge repositories can be leveraged through Natural Language Processing, Machine Learning, and Deep Learning techniques. During my Ph.D. at Wuhan University, I focused on software tag recommendation and software knowledge understanding, developing approaches based on search-learning paradigms, CNNs, RNNs, RCNNs, and Hierarchical Attention Networks.">My research career began in Mining Software Repositories (MSR), where I explored how large-scale software knowledge repositories can be leveraged through Natural Language Processing, Machine Learning, and Deep Learning techniques. During my Ph.D. at Wuhan University, I focused on software tag recommendation and software knowledge understanding, developing approaches based on search-learning paradigms, CNNs, RNNs, RCNNs, and Hierarchical Attention Networks.</p>
-            <p data-zh="2019年加入华为诺亚实验室后，我的研究重心逐步从NLP和对话系统转向大规模基础模型。我参与了多代华为盘古大模型的研发，包括数十亿到万亿参数规模的稠密和混合专家（MoE）架构。工作涵盖模型架构设计、预训练、高效训练系统、推理加速、领域适配和工业部署。" data-en="Since joining Huawei Noah's Ark Lab in 2019, my research focus has gradually evolved from NLP and dialogue systems toward large-scale foundation models. I participated in multiple generations of Huawei Pangu Models, including dense and Mixture-of-Experts (MoE) architectures ranging from tens of billions to trillion-scale parameters. My work covered model architecture design, pre-training, efficient training systems, inference acceleration, domain adaptation, and industrial deployment.">Since joining Huawei Noah's Ark Lab in 2019, my research focus has gradually evolved from NLP and dialogue systems toward large-scale foundation models. I participated in multiple generations of Huawei Pangu Models, including dense and Mixture-of-Experts (MoE) architectures ranging from tens of billions to trillion-scale parameters. My work covered model architecture design, pre-training, efficient training systems, inference acceleration, domain adaptation, and industrial deployment.</p>
             <p data-zh="如今，作为比特无限（BitInf）的联合创始人兼首席科学家，我正在主导面向物理AI时代的原生物理矢量3D基础模型的研发。我们的目标是让AI系统不仅能理解语言，还能理解、生成、推理并在结构化的三维物理环境中操作。" data-en="Today, as the Co-Founder and Chief Scientist of BitInf, I am leading the development of native vectorized 3D foundation models for the Physical AI era. Our goal is to enable AI systems not only to understand language, but also to understand, generate, reason about, and operate within structured three-dimensional physical environments.">Today, as the Co-Founder and Chief Scientist of BitInf, I am leading the development of native vectorized 3D foundation models for the Physical AI era. Our goal is to enable AI systems not only to understand language, but also to understand, generate, reason about, and operate within structured three-dimensional physical environments.</p>
+        </div>
+
+        <!-- Research Journey -->
+        <div class="about-journey">
+            <div class="about-journey-item">
+                <div class="journey-icon msr">🔬</div>
+                <div class="journey-content">
+                    <h4 data-zh="软件仓库挖掘（MSR）" data-en="Mining Software Repositories (MSR)">Mining Software Repositories (MSR)</h4>
+                    <p data-zh="武汉大学博士期间。探索如何通过NLP、机器学习和深度学习技术利用大规模软件知识库。专注于软件标签推荐和软件知识理解，基于搜索-学习范式、CNN、RNN、RCNN和层次注意力网络等方法。" data-en="Ph.D. research at Wuhan University. Explored how large-scale software knowledge repositories can be leveraged through NLP, ML, and DL techniques. Focused on software tag recommendation and knowledge understanding using search-learning paradigms, CNNs, RNNs, RCNNs, and Hierarchical Attention Networks.">Ph.D. research at Wuhan University. Explored how large-scale software knowledge repositories can be leveraged through NLP, ML, and DL techniques. Focused on software tag recommendation and knowledge understanding using search-learning paradigms, CNNs, RNNs, RCNNs, and Hierarchical Attention Networks.</p>
+                </div>
+            </div>
+            <div class="about-journey-item">
+                <div class="journey-icon nlp">💬</div>
+                <div class="journey-content">
+                    <h4 data-zh="NLP 与对话系统" data-en="NLP & Dialogue Systems">NLP & Dialogue Systems</h4>
+                    <p data-zh="2019年加入华为诺亚实验室语音语义实验室，从事对话系统的开发与研究。" data-en="Joined Huawei Noah's Ark Lab (Speech & Semantic Lab) in 2019, working on dialogue system development and research.">Joined Huawei Noah's Ark Lab (Speech & Semantic Lab) in 2019, working on dialogue system development and research.</p>
+                </div>
+            </div>
+            <div class="about-journey-item">
+                <div class="journey-icon llm">🧠</div>
+                <div class="journey-content">
+                    <h4 data-zh="大规模基础模型" data-en="Large-scale Foundation Models">Large-scale Foundation Models</h4>
+                    <p data-zh="参与多代华为盘古大模型研发，包括稠密和MoE架构（数十亿到万亿参数）。工作涵盖架构设计、预训练、高效训练系统、推理加速、领域适配和工业部署。" data-en="Participated in multiple generations of Huawei Pangu Models, including dense and MoE architectures (billions to trillion-scale parameters). Work covered architecture design, pre-training, efficient training systems, inference acceleration, domain adaptation, and industrial deployment.">Participated in multiple generations of Huawei Pangu Models, including dense and MoE architectures (billions to trillion-scale parameters). Work covered architecture design, pre-training, efficient training systems, inference acceleration, domain adaptation, and industrial deployment.</p>
+                </div>
+            </div>
+            <div class="about-journey-item">
+                <div class="journey-icon s3d">🌐</div>
+                <div class="journey-content">
+                    <h4 data-zh="空间智能与物理AI" data-en="Spatial Intelligence & Physical AI">Spatial Intelligence & Physical AI</h4>
+                    <p data-zh="在比特无限（BitInf），主导原生物理矢量3D基础模型的研发，构建连接语言、几何、工程知识和物理推理的空间基础模型。" data-en="At BitInf, leading the development of native vectorized 3D foundation models, building Spatial Foundation Models that bridge language, geometry, engineering knowledge, and physical reasoning.">At BitInf, leading the development of native vectorized 3D foundation models, building Spatial Foundation Models that bridge language, geometry, engineering knowledge, and physical reasoning.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Callout block -->
+        <div class="about-callout">
+            <p class="callout-highlight" data-zh="我相信AI的下一个重大突破不会仅来自语言，而是来自能够理解和操作物理世界的智能。" data-en="I believe the next major breakthrough in AI will not come from language alone, but from intelligence that can understand and operate within the physical world.">I believe the next major breakthrough in AI will not come from language alone, but from intelligence that can understand and operate within the physical world.</p>
+            <p data-zh="在比特无限，我们正在构建连接语言、几何、物理和行动的空间基础模型。这是一段长期的研究旅程，处于基础模型、计算机视觉、图形学、CAD、机器人和物理AI的交汇点。" data-en="At BitInf, we are building Spatial Foundation Models that connect language, geometry, physics, and action. This is a long-term research journey that sits at the intersection of Foundation Models, Computer Vision, Graphics, CAD, Robotics, and Physical AI.">At BitInf, we are building Spatial Foundation Models that connect language, geometry, physics, and action. This is a long-term research journey that sits at the intersection of Foundation Models, Computer Vision, Graphics, CAD, Robotics, and Physical AI.</p>
+            <p data-zh="我一直在寻找对难题和远大目标充满热情的优秀学生、研究者和工程师。如果你对以下方向感兴趣，欢迎联系我——" data-en="I am always looking for exceptional students, researchers, and engineers who are excited by difficult problems and ambitious goals. If you are interested in any of the following areas, feel free to reach out —">I am always looking for exceptional students, researchers, and engineers who are excited by difficult problems and ambitious goals. If you are interested in any of the following areas, feel free to reach out —</p>
+            <div class="interest-chips">
+                <span>Text-to-3D</span>
+                <span>Image-to-3D</span>
+                <span>Point-to-3D</span>
+                <span>CAD Agents</span>
+                <span>3D-Editor</span>
+                <span data-zh="空间智能" data-en="Spatial Intelligence">Spatial Intelligence</span>
+                <span data-zh="物理推理" data-en="Physical Reasoning">Physical Reasoning</span>
+                <span data-zh="世界模型" data-en="World Models">World Models</span>
+                <span data-zh="大规模基础模型系统" data-en="Foundation Model Systems">Foundation Model Systems</span>
+            </div>
+            <p data-zh="我们欢迎研究实习生、访问学生、开源贡献者和未来合作者。" data-en="We welcome research interns, visiting students, open-source contributors, and future collaborators.">We welcome research interns, visiting students, open-source contributors, and future collaborators.</p>
+            <p class="callout-closing" data-zh="语言AI的时代刚刚开始。物理AI的时代尚待构建。" data-en="The age of Language AI has just begun. The age of Physical AI is still waiting to be built.">The age of Language AI has just begun. The age of Physical AI is still waiting to be built.</p>
+        </div>
+    </div>
+
+    <!-- Current Projects & Products -->
+    <div class="section">
+        <h2 class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 12 7.4l3.38 4.6L17 10.83 14.92 8H20v6z"/></svg>
+            <span data-zh="当前项目与产品" data-en="Current Projects & Products">Current Projects & Products</span>
+        </h2>
+        <div class="project-card project-card-featured">
+            <div class="project-featured-badge" data-zh="产品" data-en="Product">Product</div>
+            <h3>Sparkoh</h3>
+            <p class="proj-desc" data-zh="Sparkoh 是一个AI原生的空间智能与工程设计平台。" data-en="Sparkoh is an AI-native platform for Spatial Intelligence and Engineering Design.">Sparkoh is an AI-native platform for Spatial Intelligence and Engineering Design.</p>
+            <p class="proj-desc" data-zh="我们正在构建一个统一环境，用户可以通过自然语言、图像和多模态输入来创建、编辑和交互结构化3D内容。" data-en="We are building a unified environment where users can create, edit, and interact with structured 3D content through natural language, images, and multimodal inputs.">We are building a unified environment where users can create, edit, and interact with structured 3D content through natural language, images, and multimodal inputs.</p>
+            <p class="proj-capabilities-label" data-zh="核心能力：" data-en="Core capabilities:">Core capabilities:</p>
+            <div class="proj-tags">
+                <span>Text-to-3D</span>
+                <span>Image-to-3D</span>
+                <span>Text-to-CAD</span>
+                <span data-zh="CAD 编辑" data-en="CAD Editing">CAD Editing</span>
+                <span>3D Agents</span>
+                <span data-zh="工程设计副驾驶" data-en="Engineering Design Copilots">Engineering Design Copilots</span>
+            </div>
+            <a href="https://sparkoh.ai/" target="_blank" class="proj-link">
+                <span data-zh="访问 sparkoh.ai" data-en="Visit sparkoh.ai">Visit sparkoh.ai</span>
+                <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+        </div>
+        <div class="project-card">
+            <div class="project-featured-badge research" data-zh="研究" data-en="Research">Research</div>
+            <h3>Arko</h3>
+            <p class="proj-desc" data-zh="面向空间智能的基础模型系列" data-en="A family of foundation models for Spatial Intelligence.">A family of foundation models for Spatial Intelligence.</p>
+            <div class="proj-tags">
+                <span>Text-to-3D</span>
+                <span>Image-to-3D</span>
+                <span>Point-to-3D</span>
+                <span>3D Agents</span>
+                <span>3D-Editor</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-featured-badge research" data-zh="研究" data-en="Research">Research</div>
+            <h3>Text2CAD-Bench</h3>
+            <p class="proj-desc" data-zh="评估基于LLM的参数化CAD生成系统的基准" data-en="A benchmark for evaluating LLM-based parametric CAD generation systems.">A benchmark for evaluating LLM-based parametric CAD generation systems.</p>
+        </div>
+        <div class="project-card">
+            <div class="project-featured-badge research" data-zh="研究" data-en="Research">Research</div>
+            <h3 data-zh="结构化3D基础模型" data-en="Structured-3D Foundation Models">Structured-3D Foundation Models</h3>
+            <p class="proj-desc" data-zh="研究面向下一代空间AI系统的结构化矢量表示" data-en="Researching structured vectorized representations for next-generation Spatial AI systems.">Researching structured vectorized representations for next-generation Spatial AI systems.</p>
         </div>
     </div>
 
@@ -872,33 +1184,6 @@
                 <div class="achieve-label" data-zh="ACL · ASE · ICASSP · ICSOC" data-en="ACL · ASE · ICASSP · ICSOC" style="font-size:0.9em;color:var(--accent);font-weight:600;">ACL · ASE · ICASSP · ICSOC</div>
                 <div class="achieve-label" data-zh="顶级会议发表" data-en="Top Venue Publications">Top Venue Publications</div>
             </div>
-        </div>
-    </div>
-
-    <!-- Current Projects -->
-    <div class="section">
-        <h2 class="section-title">
-            <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 12 7.4l3.38 4.6L17 10.83 14.92 8H20v6z"/></svg>
-            <span data-zh="当前项目" data-en="Current Projects">Current Projects</span>
-        </h2>
-        <div class="project-card">
-            <h3>Arko</h3>
-            <p class="proj-desc" data-zh="面向空间智能的基础模型系列" data-en="A family of foundation models for Spatial Intelligence.">A family of foundation models for Spatial Intelligence.</p>
-            <div class="proj-tags">
-                <span>Text-to-3D</span>
-                <span>Image-to-3D</span>
-                <span>Point-to-3D</span>
-                <span>3D Agents</span>
-                <span>3D-Editor</span>
-            </div>
-        </div>
-        <div class="project-card">
-            <h3>Text2CAD-Bench</h3>
-            <p class="proj-desc" data-zh="评估基于LLM的参数化CAD生成系统的基准" data-en="A benchmark for evaluating LLM-based parametric CAD generation systems.">A benchmark for evaluating LLM-based parametric CAD generation systems.</p>
-        </div>
-        <div class="project-card">
-            <h3 data-zh="结构化3D基础模型" data-en="Structured-3D Foundation Models">Structured-3D Foundation Models</h3>
-            <p class="proj-desc" data-zh="研究面向下一代空间AI系统的结构化矢量表示" data-en="Researching structured vectorized representations for next-generation Spatial AI systems.">Researching structured vectorized representations for next-generation Spatial AI systems.</p>
         </div>
     </div>
 
